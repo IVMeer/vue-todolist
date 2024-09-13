@@ -2,20 +2,20 @@
     <div class="stack-small" v-if="!isEditing">
         <div class="custom-checkbox">
         <input 
-        type="checkbox" 
-        class="checkbox"
-        :id="id" 
-        :checked="isDone"
-        @change="$emit('checkbox-changed')"/>
+            type="checkbox" 
+            class="checkbox"
+            :id="id" 
+            :checked="isDone"
+            @change="$emit('checkbox-changed')"/>
         <label :for="id" class="checkbox-label">{{ label }}</label>
         </div>
         <div class="btn-group">
             <button 
-            type="button" 
-            class="btn" 
-            ref="editButton" 
-            @click="toggleToItemEditForm">
-            Edit 
+                type="button" 
+                class="btn" 
+                ref="editButton" 
+                @click="toggleToItemEditForm">
+                Edit 
             <span class="visually-hidden">{{ label }}</span>
             </button>
             <button type="button" class="btn btn_danger" @click="deleteToDo">
